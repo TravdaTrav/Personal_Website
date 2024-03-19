@@ -9,76 +9,341 @@
   <link rel="stylesheet" href="mediaqueries.css" />
   <body>
     <nav id="desktop-nav">
-      <div class="logo">Travis Chen</div>
+      <div class="logo">Travis Yu Chen</div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#project">Project</a></li>
+          <li><a href="#project">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
     <nav id="hamburger-nav">
-        <div class="logo">Travis Chen</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#project" onclick="toggleMenu()">Project</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
+      <div class="logo">Travis Yu Chen</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#project" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
     </nav>
     <section id="profile">
+      <div class="section__pic-container">
+        <img
+          src="./assets/profile-pic-modified.png"
+          alt="John Doe Profile Picture"
+        />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <p class="title">Travis Chen</p>
+        <p class="section__text__p2">
+          Computer Engineering Major, Johns Hopkins University
+        </p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Travis-Resume-3-17-2024.pdf')"
+          >
+            Download Resume
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn Profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/travisyuchenjhu'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github Profile"
+            class="icon"
+            onclick="location.href='https://github.com/TravdaTrav'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get to Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
         <div class="section__pic-container">
-            <img src="./assets/profile-pic.png" alt="John Doe Profile Picture">
+          <img
+            src="./assets/mount_hood.jpg"
+            alt="Profile Picture"
+            class="about-pic"
+            title="A Lake under Mount Hood, Oregon"
+          />
         </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
-            <p class="title">Travis Chen</p>
-            <p class="section__text__p2">Embedded Software Engineer</p>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>
+                1 year <br />
+                Embedded Software Development
+              </p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>
+                B.Sc. Computer Engineering (Exp. 2026) <br />
+                Magnet High School Diploma
+              </p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Hi! I'm currently a college freshman studying computer engineering
+              at Johns Hopkins University, and when I'm not cramming for
+              midterms and speedrunning class projects, you'll probably find me
+              messing around with microcontrollers at Blue Jay Racing or my
+              research lab. I also like to travel, so if you know of any cool
+              places to explore, please let me know!
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <br />
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Embedded Software Engineer</h2>
+            <p>Blue Jay Racing: Baja SAE</p>
+            <br />
+            <ul>
+              <li>
+                Implemented a WiFi/MQTT communication system between a central
+                Raspberry Pi and an array of ESP32 microcontrollers to send and
+                store sensor data from the peripherals of a buggy car
+              </li>
+              <li>
+                Utilized FreeRTOS and interrupts to maximise data transmission
+                and sampling rates, and ensured cross-OS data compatibility by
+                serializing transmissions with Google Protobuf
+              </li>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/battery.png"
+                    alt="power icon"
+                    class="icon"
+                  />
+                  <div>
+                    <p>8-Hour Uptime</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/transmission-tower.png"
+                    alt="transmission icon"
+                    class="icon"
+                  />
+                  <div>
+                    <p>75 kB/sec per Micro-Controller</p>
+                  </div>
+                </article>
+              </div>
+            </ul>
+          </div>
+          <div class="section__pic-container">
+            <img
+              src="./assets/baja_car.jpg"
+              alt="Baja Car"
+              class="about-pic"
+              title="The Current Competition Car"
+            />
+          </div>
+        </div>
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Mechanics Project Lead</h2>
+            <p>Blair Robot Project: FRC</p>
+            <br />
+            <ul>
+              <li>
+                Managed a 5-person design team tasked with building hardware
+                mechanisms using Autodesk Inventor for the FIRST Robotics
+                Competition
+              </li>
+              <li>
+                Developed a 1-degree-of-freedom claw that grabbed game pieces to
+                maximize robot scoring potential, and the final competition
+                robot qualified to compete at the 2023 FIRST World Championship
+              </li>
+              <li>
+                Designed and fabricated a wiffle-ball-shooting robot used to
+                inspire elementary school children at local STEM outreach events
+              </li>
+            </ul>
+          </div>
+          <div class="section__pic-container">
+            <img
+              src="./assets/blair_robot.jpg"
+              alt="Blair Robot"
+              class="about-pic"
+              title="The Competition Robot"
+            />
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#project'"
+      />
+    </section>
+    <section id="project">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <h2 class="experience-sub-title project-title">Project Page Currently Work in Progress</h2>
             <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/Travis-Resume-3-17-2024.pdf')">
-                    Download Resume
-                </button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                    Contact Info
-                </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com'"
+              >
+                Blog
+              </button>
             </div>
-            <div id="socials-container">
-                <img src="./assets/linkedin.png"
-                alt="My LinkedIn Profile"
-                class="icon"
-                onclick="location.href='https://www.linkedin.com/in/travisyuchenjhu'">
-                <img src="./assets/github.png"
-                alt="My Github Profile"
-                class="icon"
-                onclick="location.href='https://github.com/TravdaTrav'">
+          </div>
+          <!--
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
             </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          -->
         </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
     </section>
-    <section id='about'>
-        <p class="section__text__p1">Get to Know More</p>
-        <p class="title">About Me</p>
-        <div class="section-container">
-            <div class="section__pic-container">
-                <img src="./assets/about-pic.png" alt="Profile Picture" class=""about-pic>
-            </div>
-            <div class="about-details-container">
-                <div class=""about-containers>
-                    <div class="details=container">
-                        <img src="./assets/experience.png" alt="experience icon" class="icon">
-                    </div>
-                </div>
-            </div>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:tchen128@jh.edu">tchen128@jh.edu</a></p>
         </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a href="https://www.linkedin.com/in/travisyuchenjhu">LinkedIn</a>
+          </p>
+        </div>
+      </div>
     </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Travis Yu Chen. All Rights Reserved.</p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
