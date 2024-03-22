@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Running WiFi/MQTT on Raspberry Pi</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="blog-style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Travis Yu Chen</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#experience">Experience</a></li>
+          <li><a href="index.html#blog">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Travis Yu Chen</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+          <li>
+            <a href="index.html#experience" onclick="toggleMenu()"
+              >Experience</a
+            >
+          </li>
+          <li><a href="index.html#blog" onclick="toggleMenu()">Blog</a></li>
+          <li>
+            <a href="index.html#contact" onclick="toggleMenu()">Contact</a>
+          </li>
+        </div>
+      </div>
+    </nav>
+    <section id="blog-title">
+      <h1 class="title">
+        Implementing a MQTT Server Between ESP32 and Rasperry Pi
+      </h1>
+      <ul class="time-date">
+        <li>Posted on March 22, 2024</li>
+        <li>Topics: Arduino, ESP32, Raspberry Pi, MQTT</li>
+      </ul>
+      <img src="blog1-assets/raspberry-pi.png" alt="raspberry pi image" class="title-pic">
+    </section>
+    <nav id="blog-nav">
+      <figure class="table-of-contents">
+        <figcaption><strong>Table Of Contents</strong></figcaption>
+        <ul>
+          <li><a href="#Introduction">Introduction</a></li>
+          <li><a href="#mqtt-explanation">Overview on MQTT</a></li>
+          <li><a href="#raspberry-pi-setup">Setting Up Raspberry Pi</a></li>
+          <li><a href="#esp32-setup">Setting Up ESP32</a></li>
+          <li>
+            <a href="#integration">Example: Writing MQTT Messages to a File</a>
+          </li>
+        </ul>
+      </figure>
+    </nav>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#experience">Experience</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Travis Yu Chen. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

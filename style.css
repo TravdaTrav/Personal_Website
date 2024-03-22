@@ -499,7 +499,7 @@ body {
 
 /* PROJECTS SECTION */
 
-#project {
+#blog {
     position: relative;
 }
 
@@ -509,18 +509,18 @@ body {
     max-width: 500px;
 }
 
-.project-img {
+.blog-img {
     border-radius: 2rem;
     width: 90%;
     height: 90%;
 }
 
-.project-title {
+.blog-title {
     margin: 1rem;
     color: black;
 }
 
-.project-btn {
+.blog-btn {
     color: black;
     border-color: rgb(163, 163, 163);
 }
