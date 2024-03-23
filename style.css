@@ -154,9 +154,10 @@ a:hover {
 section {
     padding-top: 4vh;
     height: 96vh;
-    margin: 0 10rem;
+    margin: 0 auto;
     box-sizing: border-box;
     min-height: fit-content;
+    max-width: 1120px;
 }
 
 .section-container {
@@ -499,7 +500,7 @@ body {
 
 /* PROJECTS SECTION */
 
-#project {
+#blog {
     position: relative;
 }
 
@@ -509,18 +510,18 @@ body {
     max-width: 500px;
 }
 
-.project-img {
+.blog-img {
     border-radius: 2rem;
     width: 90%;
     height: 90%;
 }
 
-.project-title {
+.blog-title {
     margin: 1rem;
     color: black;
 }
 
-.project-btn {
+.blog-btn {
     color: black;
     border-color: rgb(163, 163, 163);
 }
