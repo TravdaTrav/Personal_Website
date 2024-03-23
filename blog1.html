@@ -57,8 +57,8 @@
       <figure class="table-of-contents">
         <figcaption><strong>Table Of Contents</strong></figcaption>
         <ul>
-          <li><a href="#Introduction">Introduction</a></li>
-          <li><a href="#mqtt-explanation">Overview on MQTT</a></li>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#mqtt-explanation">MQTT: An Overview</a></li>
           <li><a href="#raspberry-pi-setup">Setting Up Raspberry Pi</a></li>
           <li><a href="#esp32-setup">Setting Up ESP32</a></li>
           <li>
@@ -67,12 +67,38 @@
         </ul>
       </figure>
     </nav>
-    <section>
-      <pre>
-        <code>
-          print("Hello World");
-        </code>
-      </pre>
+    <section id="introduction">
+      <h1 class="section-title">Introduction</h1>
+      <p>When I first started to build my MQTT system on the Raspberry Pi a couple months ago, I went into it being optimistic that I could quickly set it up; after all, with the countless tutorials and well-documented libraries on the MQTT protocol, how lost could I possibly get?</p>
+      <p>The answer: very lost. While the information that I sought did exist on the Web, I realized that all the configuration and setup can be a bit disjointed from Wikis to websites. Therefore, I decided to compile all my links and experiences towards building an MQTT system into a single place, here, so that the readers can have an easier time getting MQTT to work.</p>
+      <p>This blog will first go over the basics of MQTT, which includes an explanation of the overall system, some helpful terminology, as well as useful websites that I've found for further reference. Then, we'll build our own MQTT system between a Raspberry Pi and ESP32C3 microcontrollers so that you can get some hands-on experience.</p>
+      <nav id="blog-nav">
+        <figure class="bill-of-materials">
+          <figcaption><strong>Materials Needed</strong></figcaption>
+          <ul>
+            <li>Raspberry Pi 5</li>
+            <li>XIAO ESP32C3 Micro-controller</li>
+            <li>Ethernet Cable</li>
+            <li>Appropriate Wires to Power Both Devices</li>
+          </ul>
+        </figure>
+      </nav>
+    </section>
+    <section id="mqtt-explanation">
+      <h1 class="section-title">MQTT: An Overview</h1>
+      <p>The MQTT Protocol, which stands for Message Queueing Telemetry Transport, is a lightweight communication protocol that's designed to help bandwidth-constrained devices communicate with one another wirelessly.</p>
+
+      <p>The protocol has two main groups of participants, a <b>Broker</b> and a <b>Client</b>. In this system, the client can either publish or subscribe to messages from the broker, with each message being assigned a single <b>Topic</b>. Once the broker recieves a message published from a client along with an attached topic, it will then redistribute the message to all clients subscribed to said topic.</p>
+      <img src="blog1-assets/fig-1.png" alt="MQTT figure" class="title-pic">
+      <p>In the example above, after Client 1 publishes "Hello" to the Broker with a topic "Greetings", the Broker will send that message to both Client 2 and 3 who are subscribed to the topic "Greetings", but not Client 4 who is subscribed to the topic "Farewells".</p>
+
+      <p>A key thing to note here is that <b>no client in the MQTT Protocol directly communicates with another client</b>. Because clients are only sending and recieving messages from the broker, the only connection a client needs to maintain is the one between the broker and the client itself. This holds true whether there is 1 subscribed client or 100 subscribed clients, which greatly simplifies the overall network topology.</p>
+
+      <p>Furthermore, after reducing the MQTT network to just a bunch of client-broker connections, you can customize each individual connection with a wide-array of options/features, a big one being <b>Quality-of-Service</b> or <b>QoS</b> levels. The QoS level assigned to each message in a client-broker connection dictates whether a message will only be sent once (QoS O), will be recieved at least once (QoS 1), or recieved only once (QoS 2). I won't be going further into these customizations since this is as far as my example will go, but feel free to read more about them <a href="https://docs.hivemq.com/hivemq/latest/user-guide/index.html">here</a> at HiveMQTT.</p>
+    </section>
+    <section id="raspberry-pi-setup">
+      <h1 class="section-title">Setting Up Raspberry Pi</h1>
+      <p>Now that we understand the basics of the MQTT Protocol, lets starting building one by configuring the Broker that will be running on the Raspberry Pi.</p>
     </section>
     <footer>
       <nav>
