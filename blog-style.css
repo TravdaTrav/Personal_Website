@@ -29,7 +29,7 @@ section {
     white-space: nowrap;
 }
 
-#blog-title .title-pic {
+ .title-pic {
     border-radius: 2rem;
     width: 800px;
     margin-left: 5%;
@@ -79,4 +79,45 @@ pre {
     display: block;
     word-wrap: break-word;
     border-radius: 0.5rem;
+}
+
+/* LIST OF MATERIALS */
+
+.bill-of-materials{
+    padding: 15px;
+}
+
+.bill-of-materials figcaption {
+    text-align: center;
+    border: 3px solid;
+    border-width: 0 0 1px 0;
+    border-color: rgb(53, 53, 53);
+}
+
+.bill-of-materials ul {
+    list-style: none;
+    padding: 2px;
+}
+
+/* PARAGRAPHS */
+
+section .section-title {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+section p {
+    text-indent: 20px;
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    padding: 10px;
+}
+
+section p a {
+    color: rgb(36, 36, 165);
+    font-weight: 400;
+}
+
+section p a:hover {
+    text-underline-offset: 0.5rem;
 }
